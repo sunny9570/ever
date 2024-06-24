@@ -14,16 +14,16 @@ $(function () {
 
     })
 
-    $('#bgndVideo').YTPlayer({
-        videoURL: 'https://youtu.be/Sxf3GovRy-4',
-        containment: 'slide-img',
-        // 아래 뒤에 값 없애고 showControls: false더하면 유투브재생버튼없어짐
-        showControls: false,
-        playOnlyIfVisible: true,
-        // playOnlyIfVisible동영상이 돌아갈때만 재생
+    // $('#bgndVideo').YTPlayer({
+    //     videoURL: 'https://youtu.be/Sxf3GovRy-4',
+    //     containment: '.main_movie',
+    //     // 아래 뒤에 값 없애고 showControls: false더하면 유투브재생버튼없어짐
+    //     showControls: false,
+    //     playOnlyIfVisible: true,
+    //     // playOnlyIfVisible동영상이 돌아갈때만 재생
 
-    });
+    // });
 
-    let sw = true;
+    // let sw = true;
 
 })
