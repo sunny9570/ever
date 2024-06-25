@@ -8,11 +8,12 @@
 }
 
 @font-face {
-    font-family: 'ONE-Mobile-POP';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
-    font-weight: normal;
+    font-family: 'MoveSans-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
+
 
 
 body {
@@ -21,6 +22,6 @@ body {
 }
 
 h2 {
-    font-family: 'ONE-Mobile-POP';
+    font-family: 'MoveSans-Bold';
 
 }

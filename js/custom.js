@@ -11,6 +11,10 @@ $(function () {
 
     const mainVisualSlide = new Swiper('.main_visual_slide', {
         loof: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
 
     });
 
@@ -40,6 +44,16 @@ $(function () {
         showControls: false,
         playOnlyIfVisible: true,
 
+    });
+
+    const mainNewSlide = new Swiper('.main_new_slide', {
+        loof: true,
+        slidesPerView: 3,
+        // spaceBetween: 30,
+        navigation: {
+            nextEl: '.main_new .arrows .next',
+            prevEl: '.main_new .arrows .prev',
+        },
     });
 
 })

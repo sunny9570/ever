@@ -151,6 +151,10 @@
     font-weight: 600;
 }
 
+.main_movie {
+    height: 100vh;
+}
+
 .main_visual .itm02 {
     /* background: url(../images/circus_bg01.jpg) no-repeat center center/cover; */
 }
@@ -191,11 +195,6 @@
     padding: 120px 0;
 }
 
-.main_content .title {
-    margin: 0 0 40px 0;
-    text-align: center;
-}
-
 .main_content .inner {
     display: flex;
 }
@@ -203,6 +202,7 @@
 .main_content .left {
     flex: 1;
 }
+
 
 .main_content .left .img_box {
     position: relative;
@@ -221,35 +221,48 @@
 
 .main_content .left .img_box .con {
     position: absolute;
-    width: 300px;
-    height: 400px;
-    inset: 15% 0 0 0;
-    border-radius: 40px;
+    width: 280px;
+    height: 445px;
+    top: 8.7%;
+    left: 21%;
+
+    border-radius: 20px;
     overflow: hidden;
 }
 
 
 .main_content .left .img_box .con img {
     transition: 1s;
+
 }
 
-.main_content .lef:hover .con img {
+.main_content .left:hover .img_box .con img {
     transform: translate(0,
-            calc(-100% + 710px));
+            calc(-135% + 710px));
 }
 
 
 .main_content .right {
     flex: 2;
+    padding: 60px 0 0 0;
 }
 
-.main_content .right {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.main_content .right .panda_desc {
+    display: flex;
     gap: 30px;
 }
 
-.main_content .right i {
+.main_content .right .panda_desc .title {
+    margin: 0 0 40px 0;
+}
+
+.main_content .right .icon_group {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 24px 0;
+}
+
+.main_content .right .icon_box i {
     font-size: 72px;
     padding: 24px;
     background: skyblue;
@@ -261,30 +274,50 @@
 .main_content .right .icon_box a {
     display: block;
     text-align: center;
+}
+
+.main_content .right .panda_say {
+    display: flex;
+    gap: 40px;
+}
+
+.main_content .right .panda_say img {
+    height: 160px;
+}
+
+.main_content .right .panda_say p {
+    position: relative;
+    border: 2px solid pink;
+    line-height: 64px;
+    padding: 0 40px;
+    border-radius: 24px;
+}
+
+/* .main_content .right .panda_say p::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -50%;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid pink; */
 
 }
 
-.main_content .right .icon_box p {}
-
-.main_water {
-    padding: 120px 0;
-    background: skyblue;
-}
 
 .main_new {
+    position: relative;
     padding: 0 0 120px 0;
 }
+
 
 .main_new .title {
     text-align: center;
     margin: 0 0 40px 0;
 }
 
-.main_new .inner {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-}
+
 
 .main_new .news_box figure {
     margin: 0 0 20px 0;
@@ -314,42 +347,32 @@
     color: #fff;
 }
 
-
-
-.main_water .inner {
-    display: flex;
-}
-
-
-
-.main_water .inner>* {
-    flex: 1;
-}
-
-.main_water .img_box {
-    position: relative;
-    background: url(../images/water_bg07.jpg) no-repeat;
-}
-
-.main_water .img_box img {
-    height: 240px;
-}
-
-.main_water .img_box .character03 {
+.main_new .arrows {
     position: absolute;
-    top: 40%;
-    right: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    max-width: 1900px;
+    width: 100%;
+
 }
 
-.main_water .img_box .character04 {
+.main_new .arrows button {
     position: absolute;
-    top: 0;
+}
+
+.main_new .arrows .prev {
+    left: 0;
+}
+
+.main_new .arrows .next {
     right: 0;
 }
 
-.main_movie {
-    height: 100vh;
-}
+
+
+
 
 
 .mokup .img_box {
