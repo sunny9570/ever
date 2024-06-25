@@ -58,7 +58,7 @@
 }
 
 .header .utils .reserve_btn {
-    border: 1px solid #fff;
+    border: 1px solid #ddd;
     border-radius: 16px;
     padding: 8px 20px;
 }
@@ -79,17 +79,19 @@
 }
 
 .main_visual .itm01 {
-    background: url(../images/panda_bg.jfif) no-repeat center center/cover;
+    /* background: url(../images/panda_bg.jfif) no-repeat center center/cover; */
 }
 
 .main_visual .itm01::before {
     content: "";
     position: absolute;
     inset: 0 0 0 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 1001;
 }
 
 .main_visual .title {
+    z-index: 10000;
     position: absolute;
     top: 50%;
     left: 13%;
@@ -117,7 +119,8 @@
     height: 16rem;
     border-radius: 50%;
     background: pink;
-    animation: circle 3s infinite
+    z-index: 999;
+    animation: circle 3s infinite;
 }
 
 
@@ -149,7 +152,7 @@
 }
 
 .main_visual .itm02 {
-    background: url(../images/circus_bg01.jpg) no-repeat center center/cover;
+    /* background: url(../images/circus_bg01.jpg) no-repeat center center/cover; */
 }
 
 .main_visual .itm02::before {
@@ -176,8 +179,16 @@
     margin: 0 15px 0 0;
 }
 
+.main_visual .itm03::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    z-index: 1001;
+}
+
 .main_content {
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .main_content .title {
@@ -193,13 +204,49 @@
     flex: 1;
 }
 
+.main_content .left .img_box {
+    position: relative;
+    padding: 0 0 30px 0;
+
+}
+
+.main_content .left .img_box .mockup img {
+    height: 550px;
+}
+
+.main_content .left .img_box img {
+
+    width: 100%;
+}
+
+.main_content .left .img_box .con {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    inset: 15% 0 0 0;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+
+.main_content .left .img_box .con img {
+    transition: 1s;
+}
+
+.main_content .lef:hover .con img {
+    transform: translate(0,
+            calc(-100% + 710px));
+}
+
+
 .main_content .right {
     flex: 2;
 }
 
 .main_content .right {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
 .main_content .right i {
@@ -208,5 +255,128 @@
     background: skyblue;
     border-radius: 16px;
     color: #fff;
+    margin: 0 0 16px 0;
+}
 
+.main_content .right .icon_box a {
+    display: block;
+    text-align: center;
+
+}
+
+.main_content .right .icon_box p {}
+
+.main_water {
+    padding: 120px 0;
+    background: skyblue;
+}
+
+.main_new {
+    padding: 0 0 120px 0;
+}
+
+.main_new .title {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.main_new .inner {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.main_new .news_box figure {
+    margin: 0 0 20px 0;
+
+}
+
+.main_new .news_box img {
+    max-height: 400px;
+    border-radius: 50%;
+}
+
+.main_new .news_box strong {
+    display: block;
+    text-align: center;
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main_new .news_box p {
+    text-align: center;
+    margin: 0 auto;
+    background: skyblue;
+    width: 120px;
+    padding: 8px 8px;
+    border-radius: 24px;
+    color: #fff;
+}
+
+
+
+.main_water .inner {
+    display: flex;
+}
+
+
+
+.main_water .inner>* {
+    flex: 1;
+}
+
+.main_water .img_box {
+    position: relative;
+    background: url(../images/water_bg07.jpg) no-repeat;
+}
+
+.main_water .img_box img {
+    height: 240px;
+}
+
+.main_water .img_box .character03 {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+
+.main_water .img_box .character04 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.main_movie {
+    height: 100vh;
+}
+
+
+.mokup .img_box {
+    position: relative;
+    width: 380px;
+    height: 510px;
+}
+
+.mokup .img_box img {
+
+    width: 100%;
+}
+
+.mokup .con {
+    position: absolute;
+    height: 680px;
+    inset: 20px 22px 20px 22px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+
+.mokup .con img {
+    transition: 1s;
+}
+
+.mokup:hover .con img {
+    transform: translate(0,
+            calc(-100% + 710px));
 }
