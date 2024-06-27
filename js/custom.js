@@ -10,7 +10,8 @@ $(function () {
     });
 
     const mainVisualSlide = new Swiper('.main_visual_slide', {
-        loof: true,
+        loop: true,
+        speed: 1500,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
@@ -47,7 +48,7 @@ $(function () {
     });
 
     const mainNewSlide = new Swiper('.main_new_slide', {
-        loof: true,
+        loop: true,
         slidesPerView: 3,
         // spaceBetween: 30,
         navigation: {
@@ -56,6 +57,50 @@ $(function () {
         },
     });
 
+
+    const mainAttracLlide = new Swiper('.main_attraction .main_attrac_slide', {
+        // slidesPerView: 5,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        loop: true,
+
+
+
+        on: {
+            slideChangeTransitionStart: function () {
+                // $('.main_attraction .w_bg ').stop().animate({
+                //     backgroundPositionX: this.realIndex * 3000
+                // }, 1000);
+
+                // $('.main_attraction').css({
+                //     backgroundImage: `url(../images/bbg0.jpg)`
+                // });
+                $('.main_attraction .tap_menu li').eq(this.realIndex).addClass('on').siblings().removeClass('on');
+
+            }
+        },
+
+        navigation: {
+            nextEl: '.main_product .arrows .next',
+            prevEl: '.main_product .arrows .prev',
+
+        },
+    });
+
+
+    $('.main_attraction .tap_menu button').on('click', function () {
+        let idx = $(this).parent().index();//0,1
+        $('.main_attraction .tap_con .ts')
+            .eq(idx)
+            .addClass('on')
+            .siblings()
+            .removeClass('on')
+
+        $(this).parent().addClass('on').siblings().removeClass('on');
+
+
+        mainAttracLlide.slideToLoop(idx)
+    });
 
 
     $('.left_slide').slick({
