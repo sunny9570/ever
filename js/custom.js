@@ -62,19 +62,20 @@ $(function () {
         // slidesPerView: 5,
         slidesPerView: "auto",
         centeredSlides: true,
+        // spaceBetween: 30,
         loop: true,
 
 
 
         on: {
             slideChangeTransitionStart: function () {
-                // $('.main_attraction .w_bg ').stop().animate({
-                //     backgroundPositionX: this.realIndex * 3000
-                // }, 1000);
+                $('.main_attraction .w_bg ').stop().animate({
+                    backgroundPositionX: this.realIndex * 3000
+                }, 1000);
 
-                // $('.main_attraction').css({
-                //     backgroundImage: `url(../images/bbg0.jpg)`
-                // });
+                $('.main_attraction').css({
+                    backgroundImage: `url(../images/sea01.jpg)`
+                });
                 $('.main_attraction .tap_menu li').eq(this.realIndex).addClass('on').siblings().removeClass('on');
 
             }
@@ -121,6 +122,17 @@ $(function () {
     });
     $('.main_two_slide .arrows .next').on('click', function () {
         $('.left_slide').slick('slickNext')
+    });
+
+    $('.main_customer .notice .notice_menu button').on('click', function () {
+        let idx = $(this).parent().index();//0,1
+        $('.main_customer .notice .notice_content>ul')
+            .eq(idx)
+            .addClass('on')
+            .siblings()
+            .removeClass('on');
+
+        $(this).parent().addClass('on').siblings().removeClass('on')
     });
 
 })
