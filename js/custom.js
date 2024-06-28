@@ -17,6 +17,11 @@ $(function () {
             disableOnInteraction: false,
         },
 
+        navigation: {
+            nextEl: '.main_visual .arrows .next',
+            prevEl: '.main_visual .arrows .prev',
+        },
+
     });
 
     $('#bgndVideo01').YTPlayer({
@@ -74,7 +79,7 @@ $(function () {
                 }, 1000);
 
                 $('.main_attraction').css({
-                    backgroundImage: `url(../images/sea01.jpg)`
+                    // backgroundImage: `url(../images/sea01.jpg)`
                 });
                 $('.main_attraction .tap_menu li').eq(this.realIndex).addClass('on').siblings().removeClass('on');
 
@@ -82,8 +87,8 @@ $(function () {
         },
 
         navigation: {
-            nextEl: '.main_product .arrows .next',
-            prevEl: '.main_product .arrows .prev',
+            nextEl: '.main_attraction .arrows .next',
+            prevEl: '.main_attraction .arrows .prev',
 
         },
     });
@@ -135,4 +140,20 @@ $(function () {
         $(this).parent().addClass('on').siblings().removeClass('on')
     });
 
+    AOS.init();
+
+});
+
+
+$(function () {
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        let secOffset = $('.main_customer').offset().top;
+
+        if (sct > secOffset - 200) {
+            $('.main_customer').addClass('on')
+        } else {
+            $('.main_customer').removeClass('on')
+        }
+    })
 })
