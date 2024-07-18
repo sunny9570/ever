@@ -11,9 +11,9 @@ $(function () {
 
     const mainVisualSlide = new Swiper('.main_visual_slide', {
         loop: true,
-        speed: 1500,
+        speed: 3000,
         autoplay: {
-            delay: 5000,
+            delay: 10000,
             disableOnInteraction: false,
         },
 
@@ -24,33 +24,33 @@ $(function () {
 
     });
 
-    $('#bgndVideo01').YTPlayer({
-        videoURL: 'https://youtu.be/J-bJDSwTQMM',
-        containment: '.main_movie01',
-        showControls: false,
-        playOnlyIfVisible: true,
+    // $('#bgndVideo01').YTPlayer({
+    //     videoURL: 'https://youtu.be/J-bJDSwTQMM',
+    //     containment: '.main_movie01',
+    //     showControls: false,
+    //     playOnlyIfVisible: true,
 
-    });
+    // });
 
-    $('#bgndVideo02').YTPlayer({
-        videoURL: 'https://youtu.be/_-mmbLYbmic',
-        containment: '.main_movie02',
-        // 아래 뒤에 값 없애고 showControls: false더하면 유투브재생버튼없어짐
-        showControls: false,
-        playOnlyIfVisible: true,
-        // playOnlyIfVisible동영상이 돌아갈때만 재생
+    // $('#bgndVideo02').YTPlayer({
+    //     videoURL: 'https://youtu.be/_-mmbLYbmic',
+    //     containment: '.main_movie02',
+    //     // 아래 뒤에 값 없애고 showControls: false더하면 유투브재생버튼없어짐
+    //     showControls: false,
+    //     playOnlyIfVisible: true,
+    //     // playOnlyIfVisible동영상이 돌아갈때만 재생
 
-    });
+    // });
 
-    // let sw = true;
+    // // let sw = true;
 
-    $('#bgndVideo03').YTPlayer({
-        videoURL: 'https://youtu.be/xn7md_oi0pA',
-        containment: '.main_movie03',
-        showControls: false,
-        playOnlyIfVisible: true,
+    // $('#bgndVideo03').YTPlayer({
+    //     videoURL: 'https://youtu.be/xn7md_oi0pA',
+    //     containment: '.main_movie03',
+    //     showControls: false,
+    //     playOnlyIfVisible: true,
 
-    });
+    // });
 
     const mainNewSlide = new Swiper('.main_new_slide', {
         loop: true,
